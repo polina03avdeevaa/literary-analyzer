@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
-    
+
 
 from pathlib import Path
 
@@ -432,8 +432,8 @@ total_characters = sum(len(text.content) for text in texts)
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric('Произведения', len(texts))
-col2.metric('Авторы', len(authors))
+col1.metric('Количество произведений', len(texts))
+col2.metric('Количество авторов', len(authors))
 col3.metric(
     'Количество символов',
     f'{total_characters:,}'.replace(',', ' '),
@@ -453,8 +453,7 @@ upload_tab, manual_tab = st.tabs(
 # Загрузка TXT-файлов с отдельной формой для каждого произведения.
 with upload_tab:
     st.write(
-        'Загрузите TXT-файлы. У каждого файла будет собственная форма '
-        'метаданных. Добавляйте произведения по одному.'
+        'Загрузите файлы в txt-формате. Каждый файл содержит свою форму метаданных. Добавляйте произведения по одному.'
     )
 
     uploaded_files = st.file_uploader(
@@ -845,7 +844,5 @@ if results is not None:
 st.divider()
 
 st.caption(
-    'Количественные характеристики описывают текст, но не доказывают '
-    'авторство или литературное влияние. При сравнении следует учитывать '
-    'объём произведения, язык, жанр и литературную форму.'
+    'При сравнении следует учитывать объем произведения, язык, жанр и литературную форму.'
 )

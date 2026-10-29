@@ -1,6 +1,6 @@
 # Анализ и сравнение литературных текстов
 
-[Ссылка на веб-приложение]([literary-analyzer.streamlit.app/](https://literary-analyzer.streamlit.app/)).
+[Ссылка на веб-приложение](https://literary-analyzer.streamlit.app/).
 
 ## О проекте
 

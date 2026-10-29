@@ -1,0 +1,131 @@
+:root {
+    --page-bg: #faf7f1;
+    --surface-bg: #fffdf9;
+    --text-main: #40352f;
+    --text-muted: #81736a;
+    --accent: #98684f;
+    --accent-hover: #79503d;
+    --accent-soft: #eee2d5;
+    --border-color: #e6dbcf;
+}
+
+
+
+.stApp {
+    background-color: var(--page-bg);
+    color: var(--text-main);
+}
+
+.block-container {
+    max-width: 1440px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Только цвет заголовков */
+h1,
+h2,
+h3 {
+    color: var(--text-main);
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--text-muted);
+}
+
+
+
+[data-testid="stMetric"] {
+    background-color: var(--surface-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-muted);
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--accent);
+}
+
+
+
+.stButton > button,
+.stDownloadButton > button,
+.stFormSubmitButton > button {
+    border-radius: 8px;
+    border-color: var(--border-color);
+}
+
+.stButton > button[kind="primary"],
+.stFormSubmitButton > button[kind="primary"] {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+}
+
+.stButton > button[kind="primary"]:hover,
+.stFormSubmitButton > button[kind="primary"]:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+
+
+div[data-baseweb="input"] > div,
+div[data-baseweb="textarea"] > div,
+div[data-baseweb="select"] > div {
+    border-radius: 8px;
+}
+
+
+
+.stTabs [data-baseweb="tab-list"] {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--text-muted);
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    color: var(--accent);
+}
+
+
+
+hr {
+    border-color: var(--border-color);
+}
+
+
+
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+[data-testid="stExpander"] {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+
+
+[data-testid="stAlert"] {
+    border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .block-container {
+        padding-top: 1.25rem;
+        padding-bottom: 2rem;
+    }
+}
